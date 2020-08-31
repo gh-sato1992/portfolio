@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Kohei Sato | Portfolio Website</title>
+  <meta name="description" content="このサイトは転職活動のために作成しました。制作したWebデザインを紹介するポートフォリオサイトです。">
+  <meta name="keywords" content="Web, デザイン, デザイナー, ポートフォリオ, Web制作">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    function postToGoogle() {
+    
+    //フォームの隊を取得
+    var field1 = $('[name="entry.1529076190"]').val();
+    var field2 = $('[name="entry.452506108"]').val();
+    var field3 = $('[name="entry.2122355814"]').val();
+    var field4 = $('[name="entry.1515491257"]').val();
+    
+    //urlやentryは書き換えてね。
+              $.ajax({
+              url: "https://docs.google.com/forms/u/1/d/e/1FAIpQLSdHfV2x9PanX8FjjnW4eIsFI686lAvukvFG0t-nhv29oq9Hbw/formResponse",
+              data: {
+    "entry.1529076190": field1,
+    "entry.452506108": field2,
+    "entry.2122355814": field3,
+    "entry.1515491257": field4,
+    },
+              type: "POST",
+              dataType: "xml",
+              statusCode: {
+                  0: function() {
+                      //Success message
+    location.href="http://satokohei.com/thanks.html";
+                  },
+                  200: function() {
+                      //Success Message
+    location.href="http://satokohei.com/thanks.html";
+                  }
+              }
+          });
+          }
+    </script>
+</head>
+
+<body>
+  <header>
+    <p class="logo">
+      <a class="logo_title" href="#top"><span class="text-small">Portfolio Website</span>Kohei Sato</a>
+    </p>
+    <div>
+      <ul class="pc_navi">
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="sp_navi">
+      <!--ハンバーガー3本線-->
+      <div class="humberger-wrap">
+        <div class="humberger-border-1"></div>
+        <div class="humberger-border-2"></div>
+        <div class="humberger-border-3"></div>
+      </div>
+      <!--一般的なヘッダーメニュー-->
+      <nav>
+        <ul class="header-navigation">
+          <li class="header-navigation"><a href="#about"><span>About</span></a></li>
+          <li class="header-navigation"><a href="#portfolio"><span>Portfolio</span></a></li>
+          <li class="header-navigation"><a href="#contact"><span>Contact</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="top">
+    <img src="images/kamon.png" alt="">
+    <h2>KOHEI SATO</h2>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About</h2>
+      <div class="about_box">
+        <div class="about_inner_01">
+          <div class="about_img">
+            <img class="profile_icon" src="images/profile.jpg" alt="">
+          </div>
+          <div class="about_skills">
+            <table>
+              <tr>
+                <td>Name</td>
+                <td>佐藤康平</td>
+              </tr>
+              <tr>
+                <td>Age</td>
+                <td>27</td>
+              </tr>
+              <tr>
+                <td>Address</td>
+                <td>東京都</td>
+              </tr>
+              <tr>
+                <td>Skills</td>
+                <td>HTML, CSS, Sass, jQuery, Photoshop, レスポンシブWebデザイン, WordPress</td>
+              </tr>
+              <tr>
+                <td>GitHub</td>
+                <td><a href="https://github.com/gh-sato1992">gh-sato1992<i class="fa fa-external-link" aria-hidden="true"></i></a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="about_inner_02">
+          <p>東京都在住の佐藤康平と申します。
+          <br>
+          <br>本ポートフォリオサイトは、転職活動のために作成し、スクール卒業後に制作したオリジナルサイトとスクールの課題で制作したサイトを掲載しております。ご覧いただければ幸いです。
+          <br>
+          <br>大学卒業後、4年間メーカーの経理担当として従事。その後Web制作に惹かれ、オンラインスクールでWebデザインコースを受講いたしました。
+          <br>
+          <br>私のWeb制作は、Webデザインの学習から始まりましたが、その過程でコーディングの面白さを感じることができました。今後も自己研鑽に励み、Web制作スキルを磨いていく所存です。
+          <br>
+          <br>お客様をはじめ、ご一緒にお仕事できる方々と共にワクワクしながらWebサービスを創出していきたいと考えております。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <div class="portfolio_box">
+        <div class="portfolio_box_inner">
+          <a href="portfolio_06.html">
+            <img src="images/portfolio_06.jpg" alt="">
+            <div class="img_text">
+              <p>OKASHIYA
+              <br>(架空サイト)</p>
+            </div>
+          </a>
+          <a class="sp" href="portfolio_06.html">OKASHIYA<i class="fa fa-external-link" aria-hidden="true"></i></a>
+        </div>
+        <div class="portfolio_box_inner">
+          <a href="portfolio_05.html">
+            <img src="images/portfolio_05.jpg" alt="">
+            <div class="img_text">
+              <p>APPLE BERRY
+              <br>(スクールの課題)</p>
+            </div>
+          </a>
+          <a class="sp" href="portfolio_05.html">APPLE BERRY<i class="fa fa-external-link" aria-hidden="true"></i></a>
+        </div>
+        <div class="portfolio_box_inner">
+          <a href="portfolio_04.html">
+            <img src="images/portfolio_04.jpg" alt="">
+            <div class="img_text">
+              <p>Portfolio Website</p>
+            </div>
+          </a>
+          <a class="sp" href="portfolio_04.html">Portfolio Website<i class="fa fa-external-link" aria-hidden="true"></i></a>
+        </div>
+        <div class="portfolio_box_inner">
+          <a href="portfolio_03.html">
+            <img src="images/portfolio_03.jpg" alt="">
+            <div class="img_text">
+              <p>Filmcamera's World
+              <br>(架空サイト)</p>
+            </div>
+          </a>
+          <a class="sp" href="portfolio_03.html">Filmcamera's World<i class="fa fa-external-link" aria-hidden="true"></i></a>
+        </div>
+        <div class="portfolio_box_inner">
+          <a href="portfolio_02.html">
+            <img src="images/portfolio_02.jpg" alt="">
+            <div class="img_text">
+              <p>株式会社れき泉
+              <br>(架空サイト)</p>
+            </div>
+          </a>
+          <a class="sp" href="portfolio_02.html">株式会社れき泉<i class="fa fa-external-link" aria-hidden="true"></i></a>
+        </div>
+        <div class="portfolio_box_inner sp_bottom">
+          <a href="portfolio_01.html">
+            <img src="images/portfolio_01.jpg" alt="">
+            <div class="img_text">
+              <p>KAWAcafe
+              <br>(架空サイト)</p>
+            </div>
+          </a>
+          <a class="sp" href="portfolio_01.html">KAWAcafe<i class="fa fa-external-link" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>こちらからお問い合わせいただけます</p>
+      <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSdHfV2x9PanX8FjjnW4eIsFI686lAvukvFG0t-nhv29oq9Hbw/formResponse" target="_self" method="POST" id="mG61Hd" jsmodel="TOfxwf Q91hve" data-response="%.@.[]]" data-first-entry="0" data-last-entry="4" data-is-first-page="true" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+        <div>
+          <input name="entry.1529076190" required="required" type="text"　id="name" placeholder="Your Name">
+        </div>
+        <div>
+          <input name="entry.452506108" required="required" type="email" id="email" placeholder="Your Email">
+        </div>
+        <div>
+          <input name="entry.2122355814" type="text" placeholder="Subject">
+        </div>
+        <div>
+          <textarea name="entry.1515491257" id="message" placeholder="messages..."></textarea>
+        </div>
+        <input type="submit" class="button" onClick="postToGoogle()" value="送信">
+      </form>
+    </div>
+  </section>
+  
+  <footer>
+    <p>© Kohei Sato</p>
+  </footer>
+  
+  <script>
+    $(function() {
+      
+      $(".humberger-wrap").on("click", function() {
+        $(".humberger-wrap").toggleClass("opened");
+        $("header").toggleClass("opened");
+      });
+
+      $(".header-navigation > a").on("click", function() {
+        $(".humberger-wrap").removeClass("opened");
+        $("header").removeClass("opened");
+      })
+
+    });
+  </script>
+
+</body>
+
+</html>

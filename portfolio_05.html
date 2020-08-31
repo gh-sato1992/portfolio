@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio-03 | Kohei Sato | Portfolio Website</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <p class="logo">
+      <a class="logo_title" href="index.html"><span class="text-small">Portfolio Website</span>Kohei Sato</a>
+    </p>
+  </header>
+
+  <section id="portfolio_page_in">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <h3>APPLE BERRY
+        <br>（スクールの課題）
+      </h3>
+      <img src="images/portfolio_s_pc_01.jpg" alt="">
+      <img src="images/portfolio_s_pc_02.jpg" alt="">
+      <img src="images/portfolio_s_pc_03.jpg" alt="">
+      <table>
+        <tr>
+          <th>サイト名</th>
+          <td>APPLE BERRY</td>
+        </tr>
+        <tr>
+          <th>使用言語</th>
+          <td>HTML / CSS / Sass / jQuery</td>
+        </tr>
+        <tr>
+          <th>レスポンシブ</th>
+          <td>スマートフォン / PC</td>
+        </tr>
+        <tr>
+          <th>制作期間</th>
+          <td>10日</td>
+        </tr>
+        <tr>
+          <th>制作の目的</th>
+          <td>雑貨屋さんがオンラインで商品を販売できるようにECサイトを開設。</td>
+        </tr>
+        <tr>
+          <th>ターゲット</th>
+          <td>20〜40代の雑貨好きな人。主にスマートフォンを利用し、時々PCを利用する人。</td>
+        </tr>
+        <tr>
+          <th>デザイン</th>
+          <td>女性向けですが、男性でも問題なく利用できるデザインを意識しています。</td>
+        </tr>
+        <tr>
+          <th>備考</th>
+          <td>スクールの課題で制作しました。作成ページは、TOPページ、商品一覧ページ、商品詳細ページのみです。スクールでは段階的にコーディングの難易度が上がっていき、当時はこのECサイトの制作に高い壁を感じました。このECサイトの制作を通して、カルーセルやサイドバーの設置、画像をタイル状に配置していく技術を学びました。</td>
+        </tr>
+      </table>
+
+      <div class="btn_box">
+        <a class="sp_btn" href="images/portfolio_s_sp.jpg" >スマホデザインのページ<i class="fa fa-external-link" aria-hidden="true"></i></a>
+        <a class="sp_btn sp_btn_bottom" href="http://portfolio05.satokohei.com/" >スクール課題のページ<i class="fa fa-external-link" aria-hidden="true"></i></a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© Kohei Sato</p>
+  </footer>
+
+  <script>
+    $(function() {
+
+      $(".humberger-wrap").on("click", function() {
+        $(".humberger-wrap").toggleClass("opened");
+        $("header").toggleClass("opened");
+      });
+
+      $(".header-navigation > a").on("click", function() {
+        $(".humberger-wrap").removeClass("opened");
+        $("header").removeClass("opened");
+      })
+
+    });
+  </script>
+
+</body>
+
+</html>

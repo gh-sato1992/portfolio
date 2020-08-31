@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio-04 | Kohei Sato | Portfolio Website</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <p class="logo">
+      <a class="logo_title" href="index.html"><span class="text-small">Portfolio Website</span>Kohei Sato</a>
+    </p>
+  </header>
+
+  <section id="portfolio_page_in">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <h3>Portfolio Website
+      </h3>
+      <img src="images/portfolio_ks_pc_01.jpg" alt="">
+      <img src="images/portfolio_ks_pc_02.jpg" alt="">
+      <table>
+        <tr>
+          <th>サイト名</th>
+          <td>Portfolio Website</td>
+        </tr>
+        <tr>
+          <th>使用言語</th>
+          <td>HTML / CSS / Sass / jQuery</td>
+        </tr>
+        <tr>
+          <th>レスポンシブ</th>
+          <td>スマートフォン / PC</td>
+        </tr>
+        <tr>
+          <th>制作期間</th>
+          <td>7日</td>
+        </tr>
+        <tr>
+          <th>制作の目的</th>
+          <td>転職活動用に制作。</td>
+        </tr>
+        <tr>
+          <th>ターゲット</th>
+          <td>Web制作業界に勤めている方。</td>
+        </tr>
+        <tr>
+          <th>デザイン</th>
+          <td>今までの制作物をご覧頂きやすいように、白色と黒色を基調に、余白のバランスを考えたシンプルなデザインにしています。アクセントカラーの紫色は、私が好きな色であるのと同時に、創造力や感受性を掻き立てるクリエイティブカラーでもあるので、今の自分を表現する色として加えました。<br>アイキャッチには、本ポートフォリオサイトにお越し頂く方をお出迎えする玄関という意味を込めて、私の家系の家紋を置いています。また架空サイトの制作目的やデザインのポイントなどをまとめたページを作成し、PCとスマホの表示画面を全て設置しています。</td>
+        </tr>
+        <tr>
+          <th>備考</th>
+          <td>今後も向上心を持ってWeb制作に取り組み、さらなるスキルアップを目指していく所存です。</td>
+        </tr>
+      </table>
+
+      <div class="btn_box">
+        <a class="sp_btn" href="images/portfolio_ks_sp.jpg" >スマホデザインのページ<i class="fa fa-external-link" aria-hidden="true"></i></a>
+        <a class="sp_btn sp_btn_bottom" href="http://satokohei.com/" >サイトのページ<i class="fa fa-external-link" aria-hidden="true"></i></a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© Kohei Sato</p>
+  </footer>
+
+  <script>
+    $(function() {
+
+      $(".humberger-wrap").on("click", function() {
+        $(".humberger-wrap").toggleClass("opened");
+        $("header").toggleClass("opened");
+      });
+
+      $(".header-navigation > a").on("click", function() {
+        $(".humberger-wrap").removeClass("opened");
+        $("header").removeClass("opened");
+      })
+
+    });
+  </script>
+
+</body>
+
+</html>

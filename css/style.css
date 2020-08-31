@@ -1,0 +1,762 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  letter-spacing: .1em;
+  color: #000;
+  margin: 0;
+}
+
+@media (min-width: 550px) {
+  .container {
+    padding: 50px 40px;
+  }
+}
+
+@media (max-width: 549px) {
+  .container {
+    padding: 25px 20px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+header .logo {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 10;
+  cursor: pointer;
+  margin: 0;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+header .logo_title {
+  position: fixed;
+  color: #000;
+}
+
+header a:hover {
+  color: #8F77B5;
+}
+
+header .text-small:after {
+  content: "\A";
+  white-space: pre;
+  /* ←あわせてこれを指定しないと改行しない場合がある */
+}
+
+header .pc_navi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 30px;
+  right: 50px;
+  z-index: 10;
+}
+
+header .pc_navi li {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+header .pc_navi a {
+  color: #000;
+  margin-left: 50px;
+}
+
+header .pc_navi a:hover {
+  color: #8F77B5;
+  border-bottom: 1px solid #8F77B5;
+}
+
+@media (max-width: 549px) {
+  header .pc_navi {
+    display: none;
+  }
+}
+
+@media (min-width: 550px) {
+  .sp_navi {
+    display: none;
+  }
+}
+
+/*3本線の表示*/
+header .humberger-wrap {
+  display: block;
+}
+
+/*3本線の位置*/
+header .humberger-wrap {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 10;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+/*humberger-border1,2,3の線*/
+header .humberger-wrap [class*=humberger-border] {
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  -webkit-transition: .4s all ease;
+  transition: .4s all ease;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  background: #000;
+  /*ハンバーガーメニューの色*/
+}
+
+/*1本目の線*/
+header .humberger-wrap .humberger-border-1 {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+}
+
+/*2本目の線*/
+header .humberger-wrap .humberger-border-2 {
+  position: fixed;
+  top: 35px;
+  right: 25px;
+}
+
+/*3本目の線*/
+header .humberger-wrap .humberger-border-3 {
+  position: fixed;
+  top: 45px;
+  right: 25px;
+}
+
+/*開閉ボタンopen時の横線1本目*/
+header .humberger-wrap.opened .humberger-border-1 {
+  top: 35px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/*開閉ボタンopen時の横線2本目*/
+header .humberger-wrap.opened .humberger-border-2 {
+  top: 35px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/*開閉ボタンopen時の横線3本目*/
+header .humberger-wrap.opened .humberger-border-3 {
+  top: 35px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  opacity: 0;
+}
+
+/*メニューを非表示*/
+header nav {
+  display: none;
+}
+
+/*open時に一番上のヘッダーの背景色を変化*/
+header.opened {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: rgba(155, 144, 194, 0.9);
+}
+
+header.opened nav {
+  display: block;
+  min-height: 100vh;
+  opacity: 1;
+  top: 20px;
+}
+
+header nav ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 150px;
+}
+
+header nav ul.header-navigation {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+header nav ul.header-navigation li a {
+  line-height: 3;
+  display: block;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+#top {
+  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#top img {
+  margin-top: 200px;
+  width: 300px;
+  height: 300px;
+  -webkit-animation: 10s linear infinite rotation1;
+          animation: 10s linear infinite rotation1;
+}
+
+@-webkit-keyframes rotation1 {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation1 {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#top h2 {
+  margin-top: 5%;
+  margin-bottom: 10%;
+  font-weight: lighter;
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+@media (max-width: 549px) {
+  #top {
+    height: 100vh;
+  }
+  #top img {
+    margin-top: 40%;
+  }
+  #top h2 {
+    margin-top: 10%;
+  }
+}
+
+#about {
+  text-align: center;
+  background-color: #F5F5F5;
+}
+
+#about h2 {
+  margin: 0;
+  padding-bottom: 50px;
+  font-weight: lighter;
+  font-size: 48px;
+  font-size: 4.8rem;
+}
+
+#about .about_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#about .about_box .about_inner_01 {
+  width: 48%;
+}
+
+#about .about_box .about_inner_01 .profile_icon {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: bottom;
+}
+
+#about .about_box .about_inner_01 .about_skills {
+  padding: 10%;
+}
+
+#about .about_box .about_inner_01 .about_skills .skills_title {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+#about .about_box .about_inner_01 .about_skills p {
+  line-height: 2;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+#about .about_box .about_inner_01 .about_skills table {
+  text-align: left;
+  border-collapse: collapse;
+}
+
+#about .about_box .about_inner_01 .about_skills table tr {
+  border-bottom: 4px solid #FFF;
+}
+
+#about .about_box .about_inner_01 .about_skills table tr td {
+  padding: 10px;
+}
+
+#about .about_box .about_inner_01 .about_skills table tr a {
+  color: #000;
+}
+
+#about .about_box .about_inner_01 .about_skills table tr a:hover {
+  color: #8F77B5;
+}
+
+#about .about_box .about_inner_02 {
+  text-align: left;
+  width: 50%;
+  border: 4px #fff solid;
+  border-radius: 5px;
+}
+
+#about .about_box .about_inner_02 p {
+  margin: 0;
+  padding: 10%;
+  line-height: 2;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 549px) {
+  #about h2 {
+    padding-bottom: 25px;
+    font-size: 40px;
+    font-size: 4rem;
+  }
+  #about .about_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #about .about_box .about_inner_01 {
+    width: 100%;
+  }
+  #about .about_box .about_inner_02 {
+    width: 100%;
+  }
+}
+
+#portfolio {
+  text-align: center;
+  background-color: #fff;
+}
+
+#portfolio h2 {
+  margin: 0;
+  padding-bottom: 50px;
+  font-weight: lighter;
+  font-size: 48px;
+  font-size: 4.8rem;
+}
+
+#portfolio .portfolio_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#portfolio .portfolio_box .portfolio_box_inner {
+  width: 32%;
+  margin-bottom: 2%;
+  position: relative;
+}
+
+#portfolio .portfolio_box .portfolio_box_inner a {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#portfolio .portfolio_box .portfolio_box_inner a:hover .img_text {
+  display: block;
+}
+
+#portfolio .portfolio_box .portfolio_box_inner img {
+  vertical-align: bottom;
+  width: 100%;
+  height: auto;
+}
+
+#portfolio .portfolio_box .portfolio_box_inner .img_text {
+  display: none;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#portfolio .portfolio_box .portfolio_box_inner .img_text p {
+  margin: 0;
+  padding-top: 40%;
+  color: #000;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+#portfolio .portfolio_box .portfolio_box_inner .sp {
+  display: none;
+}
+
+@media (max-width: 549px) {
+  #portfolio h2 {
+    padding-bottom: 25px;
+    font-size: 40px;
+    font-size: 4rem;
+  }
+  #portfolio .portfolio_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #portfolio .portfolio_box .portfolio_box_inner {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #portfolio .portfolio_box .portfolio_box_inner .sp {
+    display: block;
+    margin-top: 10px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: rgba(143, 119, 181, 0.5);
+    border: 1px #8F77B5 solid;
+  }
+  #portfolio .portfolio_box .sp_bottom {
+    margin-bottom: 15px;
+  }
+}
+
+#contact {
+  text-align: center;
+  background-color: #F5F5F5;
+  /*フォーム*/
+}
+
+#contact h2 {
+  margin: 0;
+  padding-bottom: 50px;
+  font-weight: lighter;
+  font-size: 48px;
+  font-size: 4.8rem;
+}
+
+#contact p {
+  margin: 0 0 14px 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+#contact form {
+  margin-top: 30px;
+}
+
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form input[type="text"],
+#contact form textarea {
+  margin-bottom: 14px;
+  border: 1px #8F77B5 solid;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 320px;
+}
+
+#contact form textarea {
+  height: 10rem;
+}
+
+#contact form #message {
+  margin-bottom: 0;
+}
+
+#contact form .button {
+  background-color: rgba(143, 119, 181, 0.5);
+  border: 1px #8F77B5 solid;
+  border-radius: 5px;
+  padding: 10px 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+#contact form .button:hover {
+  background-color: #fff;
+}
+
+/*thanksページ*/
+#contact .thanks {
+  margin-top: 80px;
+}
+
+#contact .thanks_content {
+  line-height: 2;
+}
+
+#contact .br_sp {
+  display: none;
+}
+
+#contact .btn_home {
+  color: #000;
+  background-color: rgba(143, 119, 181, 0.5);
+  border: 1px #8F77B5 solid;
+  border-radius: 5px;
+  padding: 8px 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: inline-block;
+  width: 100%;
+  max-width: 100px;
+}
+
+#contact .btn_home:hover {
+  background-color: #fff;
+}
+
+@media (max-width: 549px) {
+  #contact .br_sp {
+    display: block;
+  }
+  #contact .thanks_content {
+    line-height: 2;
+  }
+}
+
+footer {
+  text-align: center;
+  background-color: #d3d3d3;
+}
+
+footer p {
+  color: #fff;
+  margin: 0;
+  padding: 30px 0;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+#portfolio_page_in {
+  padding: 0 100px;
+}
+
+#portfolio_page_in h2 {
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 40px;
+  font-size: 4rem;
+}
+
+#portfolio_page_in h3 {
+  margin: 0;
+  padding-bottom: 25px;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+#portfolio_page_in .url_title {
+  margin: 0;
+  padding-bottom: 25px;
+  text-align: center;
+  color: #000;
+  font-weight: lighter;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+#portfolio_page_in .url_link {
+  color: #000;
+}
+
+#portfolio_page_in .url_link:hover {
+  color: #8F77B5;
+  border-bottom: 1px solid #8F77B5;
+}
+
+#portfolio_page_in img {
+  width: 100%;
+  padding-bottom: 10px;
+  height: auto;
+  vertical-align: bottom;
+}
+
+#portfolio_page_in table {
+  margin-top: 100px;
+}
+
+#portfolio_page_in table th {
+  font-weight: lighter;
+  width: 20%;
+  display: table-cell;
+  /* IE8から使用可能 */
+  vertical-align: top;
+  text-align: left;
+  padding-bottom: 30px;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+#portfolio_page_in table td {
+  font-weight: lighter;
+  width: 80%;
+  padding-bottom: 30px;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 550px) {
+  #portfolio_page_in .btn_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #portfolio_page_in .btn_box .sp_btn {
+    text-align: center;
+    padding: 10px 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: lighter;
+    background-color: rgba(143, 119, 181, 0.5);
+    border: 1px #8F77B5 solid;
+    border-radius: 4px;
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  #portfolio_page_in .btn_box .sp_btn:hover {
+    color: #000;
+    background: #fff;
+  }
+}
+
+@media (max-width: 549px) {
+  #portfolio_page_in {
+    padding: 0;
+  }
+  #portfolio_page_in h2 {
+    margin: 0;
+    padding-top: 75px;
+    padding-bottom: 25px;
+  }
+  #portfolio_page_in h3 {
+    margin: 0;
+    padding-bottom: 25px;
+  }
+  #portfolio_page_in .url_title {
+    margin: 0;
+    padding-bottom: 25px;
+  }
+  #portfolio_page_in table {
+    margin-top: 50px;
+  }
+  #portfolio_page_in table th {
+    font-weight: lighter;
+    width: 30%;
+    text-align: left;
+    padding-bottom: 20px;
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+  #portfolio_page_in table td {
+    font-weight: lighter;
+    width: 70%;
+    padding-bottom: 20px;
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+  #portfolio_page_in table .sp_border {
+    border: 1px solid #000;
+  }
+  #portfolio_page_in .sp_btn {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    color: #000;
+    text-align: center;
+    font-weight: lighter;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 4px;
+    color: #000;
+    background-color: rgba(143, 119, 181, 0.5);
+    border: 1px #8F77B5 solid;
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  #portfolio_page_in .sp_btn:hover {
+    opacity: 0.5;
+  }
+  #portfolio_page_in .sp_btn_bottom {
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

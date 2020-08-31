@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio-01 | Kohei Sato | Portfolio Website</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <p class="logo">
+      <a class="logo_title" href="index.html"><span class="text-small">Portfolio Website</span>Kohei Sato</a>
+    </p>
+  </header>
+
+  <section id="portfolio_page_in">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <h3>KAWAcafe
+        <br>（架空サイト）</h3>
+      <img src="images/portfolio_kawacafe_pc.jpg" alt="">
+      <table>
+        <tr>
+          <th>サイト名</th>
+          <td>KAWAcafe</td>
+        </tr>
+        <tr>
+          <th>使用言語</th>
+          <td>HTML / CSS / Sass / jQuery</td>
+        </tr>
+        <tr>
+          <th>レスポンシブ</th>
+          <td>スマートフォン / PC</td>
+        </tr>
+        <tr>
+          <th>制作期間</th>
+          <td>6日</td>
+        </tr>
+        <tr>
+          <th>制作の目的</th>
+          <td>友人が新しく喫茶店をオープンするのに伴い、集客のためにホームページを開設。</td>
+        </tr>
+        <tr>
+          <th>ターゲット</th>
+          <td>メインターゲットは珈琲好きの方。その他近隣在住の方や仕事の打ち合わせに利用したいビジネスマンなど。</td>
+        </tr>
+        <tr>
+          <th>デザイン</th>
+          <td>モバイルファーストを意識したシングルページです。フォントはクラシカルな雰囲気を演出できるものを採用し、背景色は白色と灰色でシックな雰囲気にし、アクセントカラーにクラシカルな淡い水色を採用しました。<br>またファーストビューは全画面表示に設定し、カルーセルで店舗の雰囲気が伝わるようにしました。各要素でfadeInのアニメーションが作動するように設定し、穏やかな雰囲気が出るようにしました。</td>
+        </tr>
+        <tr>
+          <th>備考</th>
+          <td>初めて企画からコーディングまで通して制作しました。将来喫茶店をオープンしたいという友人と共同で企画し、打ち合わせを通して完成に辿り着きました。実際の案件だと思って仕事に取り組める環境を作り出せたので、スクールで課題通りに制作するデザインやコーディングよりも良い経験になりました。</td>
+        </tr>
+      </table>
+
+      <div class="btn_box">
+        <a class="sp_btn" href="images/portfolio_kawacafe_sp.jpg" >スマホデザインのページ<i class="fa fa-external-link" aria-hidden="true"></i></a>
+        <a class="sp_btn sp_btn_bottom" href="http://portfolio01.satokohei.com/" >架空サイトのページ<i class="fa fa-external-link" aria-hidden="true"></i></a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© Kohei Sato</p>
+  </footer>
+
+  <script>
+    $(function() {
+
+      $(".humberger-wrap").on("click", function() {
+        $(".humberger-wrap").toggleClass("opened");
+        $("header").toggleClass("opened");
+      });
+
+      $(".header-navigation > a").on("click", function() {
+        $(".humberger-wrap").removeClass("opened");
+        $("header").removeClass("opened");
+      })
+
+    });
+  </script>
+
+</body>
+
+</html>

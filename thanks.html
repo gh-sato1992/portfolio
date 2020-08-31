@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Kohei Sato | Portfolio Website</title>
+  <meta name="description" content="このサイトは転職活動のために作成しました。制作したWebデザインを紹介するポートフォリオサイトです。">
+  <meta name="keywords" content="Web, デザイン, デザイナー, ポートフォリオ, Web制作">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <p class="logo">
+      <a class="logo_title" href="index.html"><span class="text-small">Portfolio Website</span>Kohei Sato</a>
+    </p>
+  </header>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="thanks">Contact</h2>
+      <p>お問い合わせありがとうございます。</p>
+      <p class="thanks_content">ご記入いただいた情報は<br class="br_sp">無事に送信されました。<br>確認のためお客様に自動返信メールを<br class="br_sp">お送りしております。</p>
+
+      <a href="index.html" class="btn_home">HOMEへ戻る</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© Kohei Sato</p>
+  </footer>
+  
+  <script>
+    $(function() {
+      
+      $(".humberger-wrap").on("click", function() {
+        $(".humberger-wrap").toggleClass("opened");
+        $("header").toggleClass("opened");
+      });
+
+      $(".header-navigation > a").on("click", function() {
+        $(".humberger-wrap").removeClass("opened");
+        $("header").removeClass("opened");
+      })
+
+    });
+  </script>
+
+</body>
+
+</html>

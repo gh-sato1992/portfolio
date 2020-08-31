@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio-02 | Kohei Sato | Portfolio Website</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <p class="logo">
+      <a class="logo_title" href="index.html"><span class="text-small">Portfolio Website</span>Kohei Sato</a>
+    </p>
+  </header>
+
+  <section id="portfolio_page_in">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <h3>株式会社れき泉
+        <br>（架空サイト）
+      </h3>
+      <img src="images/portfolio_rekisen_pc_01.jpg" alt="">
+      <img src="images/portfolio_rekisen_pc_02.jpg" alt="">
+      <img src="images/portfolio_rekisen_pc_03.jpg" alt="">
+      <img src="images/portfolio_rekisen_pc_04.jpg" alt="">
+      <img src="images/portfolio_rekisen_pc_05.jpg" alt="">
+      <table>
+        <tr>
+          <th>サイト名</th>
+          <td>株式会社れき泉</td>
+        </tr>
+        <tr>
+          <th>使用言語</th>
+          <td>HTML / CSS / Sass / jQuery</td>
+        </tr>
+        <tr>
+          <th>レスポンシブ</th>
+          <td>スマートフォン / PC</td>
+        </tr>
+        <tr>
+          <th>制作期間</th>
+          <td>7日</td>
+        </tr>
+        <tr>
+          <th>制作の目的</th>
+          <td>主に歴史関連の事業を行なっている企業のコーポレートサイトとして開設。企業の存在証明やビジネスチャンスの獲得、人材確保を目的とし、サイトをご覧くださった方がお問い合わせできるページを設置。</td>
+        </tr>
+        <tr>
+          <th>ターゲット</th>
+          <td>既存顧客と見込顧客、一般消費者、採用応募者。</td>
+        </tr>
+        <tr>
+          <th>デザイン</th>
+          <td>歴史関連事業の企業のイメージに合うように背景を和風にしました。会社概要、採用情報、お問い合わせページには、それぞれのページに合う雰囲気の鳥獣戯画のイラストを加えています。<br>フォントは視認性の高いゴシック体を採用し、見出しは太字に、本文は細字にしています。色は信頼性と堅実性を押し出させる青色を採用しています。また短期間で完成させるために、軽量CSSフレームワークのskeletonを使用しています。</td>
+        </tr>
+        <tr>
+          <th>備考</th>
+          <td>企画からコーディングまで行いました。今回は初めてCSSのみでのハンバーガーメニューを実装しました。試行錯誤を重ね、イメージ通り動きを与えられたので、チャレンジして良かったです。今後の課題はWordPressやPHPを学習し、お問合せフォームの実用化、記事を簡単に更新投稿できるようにすることです。</td>
+        </tr>
+      </table>
+
+      <div class="btn_box">
+        <a class="sp_btn" href="images/portfolio_rekisen_sp_01.jpg" >スマホデザインのページ①<i class="fa fa-external-link" aria-hidden="true"></i></a>
+        <a class="sp_btn" href="images/portfolio_rekisen_sp_02.jpg" >スマホデザインのページ②<i class="fa fa-external-link" aria-hidden="true"></i></a>
+        <a class="sp_btn sp_btn_bottom" href="http://portfolio02.satokohei.com/" >架空サイトのページ<i class="fa fa-external-link" aria-hidden="true"></i></a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© Kohei Sato</p>
+  </footer>
+
+  <script>
+    $(function() {
+
+      $(".humberger-wrap").on("click", function() {
+        $(".humberger-wrap").toggleClass("opened");
+        $("header").toggleClass("opened");
+      });
+
+      $(".header-navigation > a").on("click", function() {
+        $(".humberger-wrap").removeClass("opened");
+        $("header").removeClass("opened");
+      })
+
+    });
+  </script>
+
+</body>
+
+</html>

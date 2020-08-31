@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio-06 | Kohei Sato | Portfolio Website</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <p class="logo">
+      <a class="logo_title" href="index.html"><span class="text-small">Portfolio Website</span>Kohei Sato</a>
+    </p>
+  </header>
+
+  <section id="portfolio_page_in">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <h3>OKASHIYA
+        <br>（架空サイト）
+      </h3>
+      <img src="images/portfolio_ec_pc_01.jpg" alt="">
+      <img src="images/portfolio_ec_pc_02.jpg" alt="">
+      <table>
+        <tr>
+          <th>サイト名</th>
+          <td>OKASHIYA</td>
+        </tr>
+        <tr>
+          <th>使用言語</th>
+          <td>HTML / CSS / Sass / jQuery</td>
+        </tr>
+        <tr>
+          <th>レスポンシブ</th>
+          <td>スマートフォン / PC</td>
+        </tr>
+        <tr>
+          <th>制作期間</th>
+          <td>3日</td>
+        </tr>
+        <tr>
+          <th>制作の目的</th>
+          <td>洋菓子屋さんがオンラインで商品を販売できるようにECサイトを開設。</td>
+        </tr>
+        <tr>
+          <th>ターゲット</th>
+          <td>チョコレートやクッキーが好きな女性。プレゼント用にデザイン性のあるお菓子を求めている人。</td>
+        </tr>
+        <tr>
+          <th>デザイン</th>
+          <td>モバイルファーストを意識したシングルページです。商品数が小規模と仮定し、サイドバーは採用せず、商品画像を一覧で見やすいようにしました。<br>背景色は優しい雰囲気の薄い黄色を使用し、各タイトルには派手な黄色のマーカーで下線を引いて、色のメリハリをつけました。リピーター向けに、商品一覧ページからお気入りの商品を選んで、まとめてカートに入れることができるような設計にしています。</td>
+        </tr>
+        <tr>
+          <th>備考</th>
+          <td>企画からコーディングまで行いました。作成ページは、TOPページと商品一覧ページのみです。今回はカートボタンの作成まで行いました。今後は実用的なカートボタンの実装ができるような技術を身につけていきたいです。</td>
+        </tr>
+      </table>
+
+      <div class="btn_box">
+        <a class="sp_btn" href="images/portfolio_ec_sp.jpg" >スマホデザインのページ<i class="fa fa-external-link" aria-hidden="true"></i></a>
+        <a class="sp_btn sp_btn_bottom" href="http://portfolio06.satokohei.com/" >架空サイトのページ<i class="fa fa-external-link" aria-hidden="true"></i></a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© Kohei Sato</p>
+  </footer>
+
+  <script>
+    $(function() {
+
+      $(".humberger-wrap").on("click", function() {
+        $(".humberger-wrap").toggleClass("opened");
+        $("header").toggleClass("opened");
+      });
+
+      $(".header-navigation > a").on("click", function() {
+        $(".humberger-wrap").removeClass("opened");
+        $("header").removeClass("opened");
+      })
+
+    });
+  </script>
+
+</body>
+
+</html>

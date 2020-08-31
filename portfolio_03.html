@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio-03 | Kohei Sato | Portfolio Website</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <p class="logo">
+      <a class="logo_title" href="index.html"><span class="text-small">Portfolio Website</span>Kohei Sato</a>
+    </p>
+  </header>
+
+  <section id="portfolio_page_in">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <h3>Filmcamera's World
+        <br>（架空サイト）
+      </h3>
+      <img src="images/portfolio_filmcamera_pc.jpg" alt="">
+      <table>
+        <tr>
+          <th>サイト名</th>
+          <td>Filmcamera's World</td>
+        </tr>
+        <tr>
+          <th>使用言語</th>
+          <td>HTML / CSS / Sass / jQuery</td>
+        </tr>
+        <tr>
+          <th>レスポンシブ</th>
+          <td>スマートフォン / PC</td>
+        </tr>
+        <tr>
+          <th>制作期間</th>
+          <td>4日</td>
+        </tr>
+        <tr>
+          <th>制作の目的</th>
+          <td>フィルムカメラ好きとフィルムカメラに触れたことがない若い世代に向けたイベントを実施するのに伴い、フィルムカメラの魅力を広めるためのプロモーションサイトとして開設。</td>
+        </tr>
+        <tr>
+          <th>ターゲット</th>
+          <td>メインターゲットは18〜30歳の女性層、その他フィルムカメラファン。</td>
+        </tr>
+        <tr>
+          <th>デザイン</th>
+          <td>モバイルファーストを意識したシングルページです。フィルムカメラのイベントなので、レトロなデザインになるような色とフォントを選びました。特に色は、メインターゲット層に合わせてガーリーな雰囲気が漂う燻んだ色を採用しています。</td>
+        </tr>
+        <tr>
+          <th>備考</th>
+          <td>企画からコーディングまで行いました。今回は背景色を2色に分割し、レトロポップな雰囲気を目指しました。またスクロールするとページトップに戻るボタンの初実装に挑戦しました。アイキャッチ画像は、Photoshopでフィルムカメラ風に加工しました。その過程でスクールではあまり触れていない部分の画像加工の勉強もしました。</td>
+        </tr>
+      </table>
+
+      <div class="btn_box">
+        <a class="sp_btn" href="images/portfolio_filmcamera_sp.jpg" >スマホデザインのページ<i class="fa fa-external-link" aria-hidden="true"></i></a>
+        <a class="sp_btn sp_btn_bottom" href="http://portfolio03.satokohei.com/" >架空サイトのページ<i class="fa fa-external-link" aria-hidden="true"></i></a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© Kohei Sato</p>
+  </footer>
+
+  <script>
+    $(function() {
+
+      $(".humberger-wrap").on("click", function() {
+        $(".humberger-wrap").toggleClass("opened");
+        $("header").toggleClass("opened");
+      });
+
+      $(".header-navigation > a").on("click", function() {
+        $(".humberger-wrap").removeClass("opened");
+        $("header").removeClass("opened");
+      })
+
+    });
+  </script>
+
+</body>
+
+</html>
